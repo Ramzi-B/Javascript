@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  // Get the modal, button and span
+  var modal = document.getElementById('myModal'),
+  btn = document.getElementById('myBtn'),
+  span = document.querySelector('.close');
+
   function installEventHandler(selector, type, eventHandler) {
     var domOBJ = document.querySelector(selector);
     domOBJ.addEventListener(type, eventHandler);
@@ -21,10 +26,6 @@
     }
   })
 
-  // Get the modal, button and span
-  var modal = document.getElementById('myModal'),
-    btn = document.getElementById('myBtn'),
-    span = document.querySelector('.close');
 
   installEventHandler('#myBtn', 'click', onClickOpen);
   installEventHandler('.close', 'click', onClickClose);
